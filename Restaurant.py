@@ -22,7 +22,7 @@ class Employee:
     def who_am_i(self):
         print("I am an Employee.")
 
-# 2) Waitress class inherits Employee
+# 2) waitress class inherits Employee
 class Waitress(Employee):
     def __init__(self, name, age, id, hours_worked, customers_served):
         super().__init__(name, age, id, hours_worked)
