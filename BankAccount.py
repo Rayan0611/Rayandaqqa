@@ -1,12 +1,12 @@
 class BankAccount:
     def __init__(self, name, balance, password):
-        # Initialize the account with name, balance, and password
+        # Creating the account with name, balance, and password
         self.name = name
         self.balance = balance
         self.password = password
 
     def verify_password(self, pw):
-        # Internal method to verify password
+        # A method to verify password
         if pw == self.password:
             return True
         else:
@@ -14,7 +14,7 @@ class BankAccount:
             return False
 
     def deposit(self, amount, pw):
-        # Deposit money if amount is positive and password is correct
+        # Deposit the money if amount is positive and password is correct
         if not self.verify_password(pw):
             return
         if amount <= 0:
@@ -24,7 +24,7 @@ class BankAccount:
             print(f"Deposited ${amount} successfully.")
 
     def withdraw(self, amount, pw):
-        # Withdraw money if amount is within balance and password is correct
+        # Withdraw the money if amount is within balance and the password is correct
         if not self.verify_password(pw):
             return
         if amount > self.balance:
@@ -40,14 +40,14 @@ class BankAccount:
         return self.balance
 
     def show_info(self):
-        # Display account info (for testing purposes)
+        # Display account info 
         print("Account Info:")
         print(f"Name: {self.name}")
         print(f"Balance: ${self.balance}")
         print(f"Password: {self.password}")
 
 
-# ---- Testing as per assignment ----
+# Testing 
 
 # John
 john = BankAccount("John", 500, "my_password")
